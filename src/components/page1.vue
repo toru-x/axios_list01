@@ -37,7 +37,11 @@ export default {
     },
     sendIp() {
       this.axios
-        .post("http://www.tic-keisokuki.com:5000/thp_data_send")
+        .post("http://www.tic-keisokuki.com:5000/thp_data",{
+          temp: "10",
+          humi: "20",
+          pres: "1010"
+        })
         .then(response => {
           alert(JSON.stringify(response.data));
           console.log(response.data)
