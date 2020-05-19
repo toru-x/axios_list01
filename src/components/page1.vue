@@ -25,8 +25,7 @@ export default {
     receiveIp() {
       this.axios
 //        .post("http://www.tic-keisokuki.com:5000/pure_flow_data_send")
-//        .post("http://www.tic-keisokuki.com:5000/thermograph_data_send")
-        .post("http://www.tic-keisokuki.com:5000/thp_data_send")
+        .post("http://localhost:5000/post_send")
         .then(response => {
           alert(JSON.stringify(response.data));
           console.log(response.data)
@@ -37,9 +36,9 @@ export default {
     },
     sendIp() {
       this.axios
-        .post("http://www.tic-keisokuki.com:5000/thp_data",{
+        .post("http://localhost:5000/post_receive",{
           temp: "10",
-          humi: "20",
+          humi: "1120",
           pres: "1010"
         })
         .then(response => {
