@@ -24,7 +24,6 @@ export default {
   methods: {
     receiveIp() {
       this.axios
-//        .post("http://www.tic-keisokuki.com:5000/pure_flow_data_send")
         .post("http://localhost:5000/post_send")
         .then(response => {
           alert(JSON.stringify(response.data));
@@ -51,6 +50,4 @@ export default {
     }
   }
 };
-
-
 </script>
